@@ -1,4 +1,5 @@
 package model.entities;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -14,7 +15,7 @@ public class Seller implements Serializable {
 
     private Department department;
 
-    public Seller(){
+    public Seller() {
 
     }
 
@@ -67,6 +68,14 @@ public class Seller implements Serializable {
         this.baseSalary = baseSalary;
     }
 
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -88,6 +97,7 @@ public class Seller implements Serializable {
                 ", email='" + email + '\'' +
                 ", birthDate=" + birthDate +
                 ", baseSalary=" + baseSalary +
+                ", department=" + department +
                 '}';
     }
 }
